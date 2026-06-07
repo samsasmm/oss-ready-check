@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OSS Ready Check</title>
+    <meta
+      name="description"
+      content="A beginner-friendly open source readiness checklist for GitHub repositories."
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div>
+        <p class="eyebrow">Repository readiness for first-time maintainers</p>
+        <h1>OSS Ready Check</h1>
+        <p class="lead">
+          Review the small signals that make a public GitHub repository easier
+          to trust, try, report issues on, and maintain.
+        </p>
+      </div>
+      <div class="header-panel" aria-label="Project status summary">
+        <span class="panel-label">v0.1.0 focus</span>
+        <strong>Clarity before complexity</strong>
+        <p>Manual checks, practical suggestions, copyable report.</p>
+      </div>
+    </header>
+
+    <main class="app-shell">
+      <section class="workspace" aria-labelledby="checklist-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Checklist</p>
+            <h2 id="checklist-heading">What does your repository already have?</h2>
+          </div>
+          <button class="ghost-button" id="resetButton" type="button">Reset</button>
+        </div>
+
+        <div class="repo-inputs" aria-label="Repository details">
+          <label>
+            Repository name
+            <input id="repoName" type="text" placeholder="example: oss-ready-check" />
+          </label>
+          <label>
+            Project type
+            <select id="projectType">
+              <option value="tool">Tool or app</option>
+              <option value="library">Library or package</option>
+              <option value="docs">Documentation project</option>
+              <option value="learning">Learning project</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="checklist" id="checklist"></div>
+      </section>
+
+      <aside class="results" aria-labelledby="results-heading">
+        <div class="score-block">
+          <p class="eyebrow">Readiness score</p>
+          <div class="score-row">
+            <strong id="score">0</strong>
+            <span>/ 100</span>
+          </div>
+          <div class="meter" aria-hidden="true">
+            <span id="meterFill"></span>
+          </div>
+          <p id="scoreLabel" class="score-label">Start by checking what exists.</p>
+        </div>
+
+        <div class="result-group">
+          <h2 id="results-heading">Next improvements</h2>
+          <ul id="suggestions" class="suggestions"></ul>
+        </div>
+
+        <div class="result-group">
+          <div class="report-heading">
+            <h2>Markdown report</h2>
+            <button id="copyButton" class="primary-button" type="button">Copy</button>
+          </div>
+          <textarea id="report" rows="12" readonly></textarea>
+          <p class="copy-status" id="copyStatus" role="status"></p>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      Built for beginner maintainers who want their first open source project to
+      be understandable, usable, and maintainable.
+    </footer>
+
+    <script src="src/app.js"></script>
+  </body>
+</html>
+
