@@ -14,6 +14,9 @@
 - Issue template suggestions
 - Release checklist
 - Beginner-friendly examples for common project types
+- Project-type checklist presets
+- Improved Markdown report formatting
+- Beginner guide for publishing a GitHub Pages demo
 
 ## v0.3.0 - Repository URL Review
 
@@ -27,4 +30,3 @@
 - GitHub Pages demo site
 - Project-type presets for tools, websites, libraries, and documentation projects
 - Exportable project health badge or report
-
