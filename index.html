@@ -6,7 +6,7 @@
     <title>OSS Ready Check</title>
     <meta
       name="description"
-      content="A beginner-friendly open source readiness checklist for GitHub repositories."
+      content="A beginner-friendly automatic open source readiness scanner for GitHub repositories."
     />
     <link rel="stylesheet" href="src/styles.css" />
   </head>
@@ -16,14 +16,14 @@
         <p class="eyebrow">Repository readiness for first-time maintainers</p>
         <h1>OSS Ready Check</h1>
         <p class="lead">
-          Review the small signals that make a public GitHub repository easier
-          to trust, try, report issues on, and maintain.
+          Scan a public GitHub repository and find the small signals that make
+          it easier to trust, try, report issues on, and maintain.
         </p>
       </div>
       <div class="header-panel" aria-label="Project status summary">
-        <span class="panel-label">v0.1.0 focus</span>
-        <strong>Clarity before complexity</strong>
-        <p>Manual checks, practical suggestions, copyable report.</p>
+        <span class="panel-label">v0.2.0 focus</span>
+        <strong>Automatic first, manual when needed</strong>
+        <p>Public repo scan, practical suggestions, copyable report.</p>
       </div>
     </header>
 
@@ -31,17 +31,26 @@
       <section class="workspace" aria-labelledby="checklist-heading">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">Checklist</p>
-            <h2 id="checklist-heading">What does your repository already have?</h2>
+            <p class="eyebrow">Scanner</p>
+            <h2 id="checklist-heading">Scan a public GitHub repository</h2>
           </div>
           <button class="ghost-button" id="resetButton" type="button">Reset</button>
         </div>
 
-        <div class="repo-inputs" aria-label="Repository details">
+        <div class="scan-box" aria-label="Repository scanner">
           <label>
-            Repository name
-            <input id="repoName" type="text" placeholder="example: oss-ready-check" />
+            GitHub repository URL
+            <input
+              id="repoUrl"
+              type="url"
+              placeholder="https://github.com/samsasmm/oss-ready-check"
+            />
           </label>
+          <button class="primary-button" id="scanButton" type="button">Scan repository</button>
+        </div>
+        <p class="scan-status" id="scanStatus" role="status"></p>
+
+        <div class="repo-inputs" aria-label="Repository details">
           <label>
             Project type
             <select id="projectType">
@@ -52,6 +61,8 @@
             </select>
           </label>
         </div>
+
+        <div class="scan-summary" id="scanSummary" aria-label="Scan summary"></div>
 
         <div class="checklist" id="checklist"></div>
       </section>
@@ -93,4 +104,3 @@
     <script src="src/app.js"></script>
   </body>
 </html>
-

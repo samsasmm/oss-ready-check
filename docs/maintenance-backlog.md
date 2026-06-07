@@ -2,7 +2,14 @@
 
 This backlog records small, realistic improvements for future releases.
 
-## v0.2.0 Candidates
+## v0.2.0 Completed
+
+- Public GitHub repository URL scanner
+- Automatic readiness scoring
+- Detection evidence for each scanned signal
+- Manual fallback for project scope judgment
+
+## v0.3.0 Candidates
 
 ### Add Project-Type Checklist Presets
 
@@ -45,4 +52,3 @@ Many first-time maintainers do not know how to turn a repository into a live dem
 - Prefer practical improvements over large rewrites
 - Use issues to track public maintenance work once issue write access is available
 - Keep the project useful for beginners, not just technically impressive
-

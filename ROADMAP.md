@@ -10,6 +10,9 @@
 
 ## v0.2.0 - Better Templates
 
+- Public GitHub repository URL scanner
+- Automatic readiness scoring
+- Detection evidence for each scanned signal
 - README section suggestions
 - Issue template suggestions
 - Release checklist
@@ -20,9 +23,9 @@
 
 ## v0.3.0 - Repository URL Review
 
-- Optional GitHub repository URL input
-- Public metadata checks where possible
-- Clear distinction between automatic checks and manual checks
+- Deeper README quality scoring
+- More project-type specific recommendations
+- Better rate-limit and private-repository messaging
 
 ## Later Ideas
 

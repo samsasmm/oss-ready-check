@@ -1,8 +1,8 @@
 # OSS Ready Check
 
-OSS Ready Check is a small, beginner-friendly tool that helps first-time maintainers review whether a GitHub repository is ready to be shared as a real open source project.
+OSS Ready Check is a small, beginner-friendly tool that helps first-time maintainers scan whether a public GitHub repository is ready to be shared as a real open source project.
 
-It focuses on the parts new maintainers often miss: project purpose, license, install instructions, screenshots, issue templates, contribution guide, release notes, roadmap, and basic maintenance signals.
+It focuses on the parts new maintainers often miss: README quality, license, repository description, install instructions, screenshots or demo links, issue templates, contribution guide, release notes, roadmap, workflows, and recent maintenance signals.
 
 ![OSS Ready Check screenshot](assets/screenshot.png)
 
@@ -19,16 +19,24 @@ The goal is not to judge projects harshly. The goal is to help maintainers make 
 - Small project maintainers who want a release checklist
 - AI-assisted developers who want a more transparent, maintainable repository
 
-## Planned v0.1.0
+## Core Workflow
 
-The first version will be a static web app that runs in the browser. No account, backend, or installation will be required.
+The first version is a static web app that runs in the browser. No account, backend, or installation is required.
 
 It will let users:
 
-- Answer a guided repository readiness checklist
-- See a simple readiness score
+- Scan a public GitHub repository URL
+- See an automatic readiness score
 - Receive practical improvement suggestions
 - Copy a Markdown report into their README, issue, or project notes
+
+## Current v0.2.0 Features
+
+- Public GitHub repository URL scanner
+- Automatic checks through GitHub's public API
+- Detection evidence for each readiness signal
+- Manual fallback for checks that automation cannot judge reliably
+- Copyable Markdown report with detected strengths and recommended improvements
 
 ## Try It Locally
 
@@ -55,14 +63,15 @@ http://127.0.0.1:4173
 Success looks like this:
 
 - The page shows the OSS Ready Check interface
-- Checking items updates the score
-- The Markdown report updates with the repository name and selected checks
+- Entering a public GitHub repository URL scans the repository
+- The score updates after detected checks are completed
+- The Markdown report updates with the repository name, score, and recommendations
 
 ## Project Status
 
 Status: early development
 
-Current focus: define the v0.1.0 checklist, build the first browser-based version, and prepare the project for public GitHub release.
+Current focus: improve the automatic scanner, refine scoring evidence, and make reports more useful for beginner maintainers.
 
 ## Open Source Maintenance Value
 
