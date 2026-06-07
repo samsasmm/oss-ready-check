@@ -32,6 +32,12 @@ It will let users:
 
 ## Try It Locally
 
+Live demo:
+
+```text
+https://samsasmm.github.io/oss-ready-check/
+```
+
 Open `index.html` in a browser.
 
 For a local preview server:
